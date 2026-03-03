@@ -18,7 +18,7 @@ For experienced developers who want to get started immediately:
 
 ```bash
 # 1. Clone and setup
-git clone https://github.com/iemafzalhassan/chattingo.git
+git clone https://github.com/anurag1352/chattingo.git
 cd chattingo
 
 # 2. Database setup
