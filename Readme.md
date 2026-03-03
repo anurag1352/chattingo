@@ -17,7 +17,7 @@ A full-stack real-time chat application built with React, Spring Boot, and WebSo
 **Deadline: September 10, 2025 (11:59 PM)**
 
 ### **📂 Repository Access**
-**Repository URL**: https://github.com/iemafzalhassan/chattingo
+**Repository URL**: https://github.com/anurag1352/chattingo.git
 - **Currently**: Private repository (registration phase)
 - **Will be public**: After registration closes (Sept 6)
 - **Action Required**: Fork & star the repository once it becomes public
