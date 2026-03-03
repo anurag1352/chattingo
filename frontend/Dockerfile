@@ -1,8 +1,10 @@
+#---Stage---1---Dependencies
 FROM node:18-alpine AS deps
 WORKDIR /app
-COPY package.json package-lock.json* ./
+COPY package*.json ./
 RUN npm install
 
+#---Stage-2--Build
 FROM node:18-alpine AS build
 WORKDIR /app
 COPY --from=deps /app/node_modules /app/node_modules
@@ -17,10 +19,9 @@ ENV REACT_APP_ENV=${REACT_APP_ENV}
 ENV REACT_APP_DEBUG=${REACT_APP_DEBUG}
 RUN npm run build
 
+#---Stage--3--Production
 FROM nginx:alpine AS runtime
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
-
-
